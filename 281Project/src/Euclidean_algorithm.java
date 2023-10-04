@@ -19,7 +19,7 @@ public class Euclidean_algorithm {
 		System.out.println("The GCD is " + a);
 		return a;
 	}
-
+	//hi 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the first Number");
