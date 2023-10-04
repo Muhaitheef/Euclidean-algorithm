@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//Welcome to the Euclidean Algorithm
 public class Euclidean_algorithm {
 	public static int Euclidean(int a, int b) {
 		return 0;
