@@ -4,7 +4,7 @@ public class Euclidean_algorithm {
 	public static int Euclidean(int a, int b) {
 		return 0;
 	}
-
+	//hi 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the first Number");
