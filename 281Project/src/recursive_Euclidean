@@ -1,1 +1,55 @@
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+public class Euclidean_algorithm {
+	//Welcome to the Euclidean Algorithm
+	
+	public static int Euclidean(int a, int b) {
+		
+		if (a == 0 || b == 0) {             				  // zero case
+			return 1;
+		}
+		
+		if (a < b) {
+			int t = a;                   				    // b is greter than a  => (swap)
+			a = b;
+			b = t;
+		}
+		
+		if (a % b == 0) {          				         // stop point 
+			System.out.println(a + "=" + a/b + "x" + b + "+" + a%b);		// the formla x = (x/y) * (y) + (x%y)
+
+			return b;                       
+		} 
+		else {
+			System.out.println(a + "=" + a/b + "x" + b + "+" + a%b);		// the formla x = (x/y) * (y) + (x%y)
+			
+			return Euclidean(b, a % b);               
+		}
+	}
+
+
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the first Number: ");
+		  int a = input.nextInt();
+		System.out.println("Enter the second Number: ");
+		int b = input.nextInt();
+		
+		System.out.println("Step 1: Using the Euclidean Algorithm to find the GCD of " + a + " and " + b);
+		System.out.println("# the GCD is " + ( b = Euclidean(a, b) ) + " #" );
+	
+		
+		System.out.println("=====================================================");
+		
+		System.out.println("Step 2: Working backwards:");
+		
+		
+		
+	     
+	}
+	}
 
