@@ -1,55 +1,77 @@
-import java.util.Scanner;
+	//3:30
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+		import java.util.Scanner;
+		import java.util.ArrayList;
+		
 
 public class Euclidean_algorithm {
-	//Welcome to the Euclidean Algorithm
 	
-	public static int Euclidean(int a, int b) {
-		
-		if (a == 0 || b == 0) {             				  // zero case
-			return 1;
-		}
-		
-		if (a < b) {
-			int t = a;                   				    // b is greter than a  => (swap)
-			a = b;
-			b = t;
-		}
-		
-		if (a % b == 0) {          				         // stop point 
-			System.out.println(a + "=" + a/b + "x" + b + "+" + a%b);		// the formla x = (x/y) * (y) + (x%y)
-
-			return b;                       
-		} 
-		else {
-			System.out.println(a + "=" + a/b + "x" + b + "+" + a%b);		// the formla x = (x/y) * (y) + (x%y)
-			
-			return Euclidean(b, a % b);               
-		}
-	}
-
-
-
-	public static void main(String[] args) {
-		
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the first Number: ");
-		  int a = input.nextInt();
-		System.out.println("Enter the second Number: ");
-		int b = input.nextInt();
-		
-		System.out.println("Step 1: Using the Euclidean Algorithm to find the GCD of " + a + " and " + b);
-		System.out.println("# the GCD is " + ( b = Euclidean(a, b) ) + " #" );
-	
-		
-		System.out.println("=====================================================");
-		
-		System.out.println("Step 2: Working backwards:");
-		
-		
-		
+	public static void Euclidean(int a, int b) {
+		 
 	     
+		if(a == 0 || b == 0 ) {                        
+			System.out.println("The GCD is " + 1);
+			System.out.println("===================================================");  
+			return  ;
+		}
+		
+		 int r =b%a;
+		 int count = 0 ;
+		 ArrayList<Integer> remainders = new ArrayList<>();
+	     ArrayList<Integer> quotients = new ArrayList<>();
+	     ArrayList<Integer> aValues = new ArrayList<>();
+	     ArrayList<Integer> bValues = new ArrayList<>();
+		
+	        
+		if (a > b) {
+			int temp = a;             // swap 
+			a = b;
+			b = temp;
+		}
+		
+	
+		
+		while(r!=0){		 
+		a = b;
+		b = r;
+		r = a%b;
+		System.out.println(a + " = " + (a / b)  + " * " + b + " + " + r);
+		
+		aValues.add(a);
+		bValues.add(b);
+		quotients.add(a/b);
+		remainders.add(a%b);
+		count++;
+
+		}
+       System.out.println("-----------------------------------");
+		System.out.println("The GCD is " + b + " #");
+		System.out.println("===================================================");  // step one end 
+		System.out.println("Step 2: Working Backwards: ");
+		count-=1 ;
+		while(count != 0 ) {
+			System.out.println(b + " =" + aValues.get(count-1) + " - " + quotients.get(count-1) + " x"  + bValues.get(count-1));
+			count--;
+		}
+	
+		
 	}
+	
+	
+	public static void main(String[] args) {
+	       // Scanner input = new Scanner(System.in);
+	        System.out.println("Enter the first number: ");
+	      //  int a = input.nextInt();
+	        System.out.println("Enter the second number: ");
+	    //    int b = input.nextInt();
+	        System.out.println("-----------------------------------");
+			System.out.println("Step 1: Using the Euclidean Algorithm to find the GCD of " + 252 + " and " + 198 + " :");
+			Euclidean(252, 198);
+			
+
+	    }
+	
 	}
+	
 
