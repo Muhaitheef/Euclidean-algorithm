@@ -54,8 +54,7 @@ public class Test {
             else if (x % y == 0) {
                 System.out.println(x + " = " + x / y + " * " + y + " + " + x % y);
                 System.out.println("gcd(" + x + "," + y + ") = " + y);
-                System.out.println(y + " = " + x % y + " * " + x + " + " + 1 + " * " + y);
-                System.out.println(x + " * x + " + y + " * y = " + y + " has a solution of (x,y) = (" + x % y + "," + 1 + ")");
+                System.out.println(x + " * 0 + " + y + " * 1 = " + y + "\n s = 0, t = 1");
             } 
             // Main case for the Euclidean algorithm
             else {
