@@ -1,54 +1,63 @@
 public class Node {
-	private int bigger, multi, smaller, mod;
-	private Node next;
-	
-	public Node(int a, int j, int b, int i) {
-		bigger = a;
-		multi = j;
-		smaller = b;
-		mod = i;
-		next = null;
-	}
+    private int bigger, multi, smaller, reminder;
+    private Node next;
 
-	public int getBigger() {
-		return bigger;
-	}
+    // Constructor for the Node class
+    public Node(int a, int j, int b, int i) {
+        bigger = a;    // a is the bigger number 
+        multi = j;    // j is the multiplier for the bigger number 
+        smaller = b;   	// b is the smaller number
+		reminder = i;    // i is the reminder
+        next = null;   
+    }
 
-	public void setBigger(int bigger) {
-		this.bigger = bigger;
-	}
+    // Getter for bigger
+    public int getBigger() {
+        return bigger;
+    }
 
-	public int getMulti() {
-		return multi;
-	}
+    // Setter for bigger
+    public void setBigger(int bigger) {
+        this.bigger = bigger;
+    }
 
-	public void setMulti(int multi) {
-		this.multi = multi;
-	}
+    // Getter for multi
+    public int getMulti() {
+        return multi;
+    }
 
-	public int getSmaller() {
-		return smaller;
-	}
+    // Setter for multi
+    public void setMulti(int multi) {
+        this.multi = multi;
+    }
 
-	public void setSmaller(int smaller) {
-		this.smaller = smaller;
-	}
+    // Getter for smaller
+    public int getSmaller() {
+        return smaller;
+    }
 
-	public int getMod() {
-		return mod;
-	}
+    // Setter for smaller
+    public void setSmaller(int smaller) {
+        this.smaller = smaller;
+    }
 
-	public void setMod(int mod) {
-		this.mod = mod;
-	}
+    // Getter for reminder
+    public int getReminder() {
+        return reminder;
+    }
 
-	public Node getNext() {
-		return next;
-	}
+    // Setter for reminder
+    public void setReminder(int reminder) {
+        this.reminder = reminder;
+    }
 
-	public void setNext(Node next) {
-		this.next = next;
-	}
-	
+    // Getter for the next Node
+    public Node getNext() {
+        return next;
+    }
 
+    // Setter for the next Node
+    public void setNext(Node next) {
+        this.next = next;
+    }
 }
