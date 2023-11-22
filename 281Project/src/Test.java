@@ -1,6 +1,6 @@
 import java.util.Scanner;
 	
-public class Test {
+public class Main {
 	    public static void main(String[] args) {
 	        Scanner S = new Scanner(System.in);
 	
@@ -30,9 +30,9 @@ public class Test {
 	            
 	            // (1) Swap x and y if y is greater than x to ensure x is always larger
 	            if (y > x) {
-	                int p = x;
+	                int tmp = x;
 	                x = y;
-	                y = p;
+	                y = tmp;
 	            }
 	
 	            // (2) Check if either input is zero and handle that case
