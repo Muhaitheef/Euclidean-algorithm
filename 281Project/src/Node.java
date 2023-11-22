@@ -3,11 +3,11 @@ public class Node {
     private Node next;
 
     // Constructor for the Node class
-    public Node(int a, int j, int b, int i) {
-        bigger = a;    // a is the bigger number 
-        multi = j;    // j is the multiplier for the bigger number 
-        smaller = b;   	// b is the smaller number
-		reminder = i;    // i is the reminder
+    public Node(int b, int m, int s, int r) {
+        bigger = b;    // b is the bigger number 
+        multi = m;    // m is the multiplier for the bigger number 
+        smaller = s;   	// s is the smaller number
+		reminder = r;    // r is the reminder
         next = null;   
     }
 
