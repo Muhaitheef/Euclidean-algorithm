@@ -74,7 +74,7 @@ public class LinkedList {
 		        // Final output for the linear combination of GCD
 		        if ( (current.getBigger() * y) < (current.getSmaller() * z) ) {
 	                System.out.println(x + " =  " + z + " x " + current.getSmaller() + " - " + y + " x " + current.getBigger());
-		            System.out.println("s = " + y + " , " + " t = -" + z);
+		            System.out.println("s = " + z + " , " + " t = -" + y);
 			                
 		        } else {
 	                System.out.println(x + " =  " + y + " x " + current.getBigger() + " - " + z + " x " + current.getSmaller());
