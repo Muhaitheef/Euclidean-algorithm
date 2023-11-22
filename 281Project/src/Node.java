@@ -3,7 +3,7 @@ public class Node {
 	    private int bigger, multi, smaller, reminder;
 	    private Node next;
 	
-	    public Node(int b, int s, int m, int r) {
+	    public Node(int b, int m, int s, int r) {
 	        bigger = b;    // b is the bigger number 
 	        multi = m;    // m is the multiplier for the bigger number 
 	        smaller = s;   	// s is the smaller number
