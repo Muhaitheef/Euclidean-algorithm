@@ -1,3 +1,6 @@
+//Mohammed Almuhaitheef 443101706
+//Mohammed Alzubaidi 443100700
+
 import java.util.Scanner;
 	
 public class Main{

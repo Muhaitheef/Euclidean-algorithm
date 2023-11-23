@@ -1,3 +1,6 @@
+//Mohammed Almuhaitheef 443101706
+//Mohammed Alzubaidi 443100700
+
 public class Node {
 		
 	    private int bigger, multi, smaller, reminder;
