@@ -12,7 +12,7 @@ public class Main{
 	            
 	            int x, y;
 	
-	            LinkedList L1 = new LinkedList();
+	            LinkedList L = new LinkedList();
 	
 	            
 	            System.out.println("Enter the First number: ");
@@ -25,7 +25,7 @@ public class Main{
 	
 	
 	            
-	            // there is a five cases  
+	            // there is a six cases  
 	            
 	            
 	            // (1) Swap x and y if y is greater than x to ensure x is always larger
@@ -34,30 +34,35 @@ public class Main{
 	                x = y;
 	                y = tmp;
 	            }
-	
-	            // (2) Check if either input is zero and handle that case
-	            if ((x == 0 || y == 0) && (x >= 0 && y >= 0)) {
+				 // (2) Handle the case where both inputs are zero
+	           
+				 if (x == 0 && y == 0) {
+	                System.out.println("Undefined , The two numbers cannot be zero , please enter a valid number");
+	                run = true;
+				}
+	            // (3) Check if either input is zero and handle that case
+	           else if ((x == 0 || y == 0) && (x >= 0 && y >= 0)) {
 		            System.out.println("Step 1: Using Euclidean algorithm to find GCD for " + x + " and " + y + " :");
 		            
-	                System.out.println(x + " = " + 1 + " x " + x + " + " + y);
+	                System.out.println(x + " = " + 1 + " x " + y + " + " + x);
 	                System.out.println("--------------------------");
-	                System.out.println("# The GCD is " + y + " # ");
+	                System.out.println("# The GCD is " + x + " # ");
 	                System.out.println("==========================================================");
 	                System.out.println("Step 2: Working backwards:");
-	                System.out.println(y + " = " + 1 + " x "+ x + " - " + 1 +  " x " + x );
+	                System.out.println(x + " = " + 1 + " x "+ x + " - " + 0 +  " x " + y);
 	                System.out.println("--------------------------");
-	                System.out.println(" s = " + 1 + ", t = -" + 1 );
+	                System.out.println(" s = " + 1 + ", t = " + 0 );
 	                
 	            } 
+	           
+	            // (4) Check for negative numbers and print an error if found, then repeat the loop
 	            
-	            // (3) Check for negative numbers and print an error if found, then repeat the loop
-	            
-	            else if (x <= 0 || y <= 0) {
+	            else if (x < 0 || y < 0) {
 	                System.out.println("Invalid Number, both numbers have to be Positive integers");
 	                run = true;
 	            } 
-	            
-	            // (4) Handle the case where one input is a multiple of the other
+				
+	            // (5) Handle the case where one input is a multiple of the other
 	            else if (x % y == 0) {
 		            System.out.println("Step 1: Using Euclidean algorithm to find GCD for " + x + " and " + y + " :");
 
@@ -71,7 +76,7 @@ public class Main{
 	                System.out.println(" s = "+ 1 + ",  t = -" + x/y);
 	            } 
 	            
-	            // (5) Main case for the Euclidean algorithm
+	            // (6) Main case for the Euclidean algorithm
 	            else {
 	            	
 		           System.out.println("Step 1: Using Euclidean algorithm to find GCD for " + x + " and " + y + " :");
@@ -84,7 +89,7 @@ public class Main{
 	                    j = x / y;
 	                    i = x % y;
 	                    System.out.println(x + " = " + j + " x " + y + " + " + i);
-	                   L1.insert(x, j, y, i); 
+	                   L.insert(x, j, y, i); 
 	                    if (i != 0) {
 	                        x = y;
 	                        y = i;
@@ -95,7 +100,7 @@ public class Main{
 	                System.out.println("# The GCD is " + y + " # ");
 	                System.out.println("==========================================================");
 	                System.out.println("Step 2: Working backwards:");
-	                L1.display();
+	                L.display();
 	                
 		            }
 		        }
