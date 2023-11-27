@@ -5,6 +5,7 @@ public class Node {
 		
 	    private int bigger, multi, smaller, reminder;
 	    private Node next;
+		private Node previous;
 	
 	    public Node(int b, int m, int s, int r) {
 	        bigger = b;    // b is the bigger number 
@@ -12,6 +13,7 @@ public class Node {
 	        smaller = s;   	// s is the smaller number
 			reminder = r;    // r is the reminder
 	        next = null;   
+			previous = null;
 	    }
 	
 	    public int getBigger() {
@@ -53,5 +55,12 @@ public class Node {
 	    public void setNext(Node next) {
 	        this.next = next;
 	    }
+		private Node getPrevious() {
+			return previous;
+		}
+
+		private void setPrevious(Node previous) {
+			this.previous = previous;
+		}
 	    
 	}
